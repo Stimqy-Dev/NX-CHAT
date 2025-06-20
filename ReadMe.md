@@ -1,36 +1,102 @@
-# s-chat rework
-
-Un système de chat reworked, moderne et performant pour FiveM.
-
----
+# S-Chat - Système de Chat Amélioré pour FiveM
 
 ## Description
 
-Ce script remplace le chat de base par un système plus fluide, esthétique et riche en fonctionnalités.  
-Il améliore l’expérience utilisateur avec une interface claire, des notifications visuelles et sonores, et une configuration simple.
+S-Chat est un **rework complet du système de chat de base** de FiveM, offrant une interface utilisateur moderne et des fonctionnalités avancées pour améliorer l'expérience de communication sur votre serveur.
 
----
+### Fonctionnalités principales :
 
-## Fonctionnalités
-
-- Chat fluide avec interface améliorée  
-- Commande /sc pour les staff (staffchat)
-
----
+- 🎨 **Interface moderne** avec animations fluides
+- 💬 **Messages multilignes** supportés
+- 🔧 **Suggestions de commandes** intelligentes
+- 👑 **Intégration ESX** pour la gestion des permissions staff
+- 📢 **Commandes d'annonces** pour les administrateurs
+- 🎯 **Templates personnalisables** pour les messages
+- ⚡ **Performance optimisée** par rapport au chat de base
+- 🎨 **Thèmes personnalisables** via CSS
 
 ## Installation
 
-1. Placez le dossier `s-chat` dans votre dossier `resources`.
+### Prérequis
 
-2. Ajoutez la ligne suivante dans votre `server.cfg` :
+- Serveur FiveM fonctionnel
+- Framework ESX (pour les fonctionnalités staff)
 
-    ```
-    ensure s-chat
-    ```
-3. Redémarrez votre serveur.
+### Étapes d'installation
+
+1. **Téléchargement**
+   ```bash
+   # Clonez ou téléchargez le repository dans votre dossier resources
+   cd resources
+   git clone [URL_DU_REPO] s-chat
+   ```
+
+2. **Configuration du serveur**
+   
+   Ajoutez cette ligne dans votre `server.cfg` :
+   ```cfg
+   ensure s-chat
+   ```
+3. **Redémarrage**
+   
+   Redémarrez votre serveur ou utilisez :
+   ```
+   restart s-chat
+   ```
+
+## Configuration
+
+### Personnalisation de l'interface
+
+Les fichiers de configuration se trouvent dans le dossier `html/` :
+
+- `config.default.js` - Configuration par défaut
+- `config.js` - Votre configuration personnalisée (créez ce fichier)
+- `index.css` - Styles CSS personnalisables
+
+## Commandes disponibles
+
+### Commandes joueurs
+- `/clearchat` - Efface l'historique du chat
+
+### Commandes administrateur
+- `/announce [message]` - Envoie une annonce serveur (console uniquement)
+
+## Fonctionnalités techniques
+
+### Performance
+- Chargement optimisé des ressources
+- Gestion intelligente de l'affichage des messages
+- Nettoyage automatique de la mémoire
+
+## Structure du projet
+
+```
+s-chat/
+├── client/
+│   └── main.lua          # Script client principal
+├── server/
+│   └── main.lua          # Script serveur principal
+├── html/
+│   ├── index.html        # Interface principale
+│   ├── App.js           # Application Vue.js
+│   ├── Message.js       # Composant message
+│   ├── Suggestions.js   # Composant suggestions
+│   ├── index.css        # Styles CSS
+│   ├── config.default.js # Configuration par défaut
+│   └── vendor/          # Bibliothèques tierces
+├── fxmanifest.lua       # Manifeste FiveM
+└── README.md           # Ce fichier
+```
+
+## Support et contribution
+
+Ce script est un rework du système de chat de base de FiveM, conçu pour offrir une meilleure expérience utilisateur et plus de fonctionnalités.
+
+### Problèmes connus
+- Assurez-vous que le chat de base est bien désactivé
+- Vérifiez que ESX est correctement configuré pour les fonctionnalités staff
 
 ---
 
-Merci d'utiliser **s-chat** !
-
----
+**Note :** Ce script remplace complètement le système de chat de base de FiveM. Assurez-vous de sauvegarder votre configuration existante avant l'installation.
