@@ -1,8 +1,8 @@
-# S-Chat - Système de Chat Amélioré pour FiveM
+# NX-CHAT - Système de Chat Amélioré pour FiveM
 
 ## Description
 
-S-Chat est un **rework complet du système de chat de base** de FiveM, offrant une interface utilisateur moderne et des fonctionnalités avancées pour améliorer l'expérience de communication sur votre serveur.
+NX-CHAT est un **rework complet du système de chat de base** de FiveM, offrant une interface utilisateur moderne et des fonctionnalités avancées pour améliorer l'expérience de communication sur votre serveur.
 
 ### Fonctionnalités principales :
 
@@ -28,20 +28,20 @@ S-Chat est un **rework complet du système de chat de base** de FiveM, offrant u
    ```bash
    # Clonez ou téléchargez le repository dans votre dossier resources
    cd resources
-   git clone [URL_DU_REPO] s-chat
+   git clone [URL_DU_REPO] NX-CHAT
    ```
 
 2. **Configuration du serveur**
    
    Ajoutez cette ligne dans votre `server.cfg` :
    ```cfg
-   ensure s-chat
+   ensure NX-CHAT
    ```
 3. **Redémarrage**
    
    Redémarrez votre serveur ou utilisez :
    ```
-   restart s-chat
+   restart NX-CHAT
    ```
 
 ## Configuration
@@ -72,7 +72,7 @@ Les fichiers de configuration se trouvent dans le dossier `html/` :
 ## Structure du projet
 
 ```
-s-chat/
+NX-CHAT/
 ├── client/
 │   └── main.lua          # Script client principal
 ├── server/
